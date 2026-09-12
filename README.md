@@ -12,7 +12,7 @@ MobileMamba-B-Lite simplifies pretrained MobileMamba-B models without retraining
 
 Screening across candidate modifications led directly to selecting Stage-1 block removal:
 
-| Configuration                    | Depth $D$       | Top-1 (%) | $\Delta$Top-1 (pp) | $\Delta$Latency (%) | Decision   |
+| Configuration                    | Depth $D$       | Top-1 (%) | ΔTop-1 (pp) | ΔLatency (%) | Decision   |
 | -------------------------------- | --------------- | --------- | ------------------ | ------------------- | ---------- |
 | Baseline                         | $(2, 3, 2)$     | 88.96     | 0.00               | —                   | —          |
 | Conv–BatchNorm fusion            | $(2, 3, 2)$     | 88.96     | 0.00               | +1.37               | Reject     |
@@ -27,7 +27,7 @@ Screening across candidate modifications led directly to selecting Stage-1 block
 
 Evaluated on an NVIDIA Tesla T4 GPU (FP32, Batch Size 32):
 
-| Model       | Resolution     | Stage Depth | Params (M) | FLOPs (G) | Top-1 (%) | Top-5 (%) | Latency (ms) | Speedup / $\Delta$Lat      | Throughput  |
+| Model       | Resolution     | Stage Depth | Params (M) | FLOPs (G) | Top-1 (%) | Top-5 (%) | Latency (ms) | Speedup / ΔLatency      | Throughput  |
 | ----------- | -------------- | ----------- | ---------- | --------- | --------- | --------- | ------------ | -------------------------- | ----------- |
 | **B1**      | $256\times256$ | $(2, 3, 2)$ | 17.12      | 1.07      | 79.94     | 94.93     | 41.36        | —                          | 773.7 img/s |
 | **B1-Lite** | $256\times256$ | $(1, 3, 2)$ | 16.54      | 0.93      | 77.96     | 93.79     | 38.54        | **-6.82%** (1.07$\times$)  | 830.4 img/s |

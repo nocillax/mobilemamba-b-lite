@@ -30,11 +30,11 @@ Evaluated on an NVIDIA Tesla T4 GPU (FP32, Batch Size 32):
 | Model       | Resolution     | Stage Depth | Params (M) | FLOPs (G) | Top-1 (%) | Top-5 (%) | Latency (ms) | Speedup / ΔLatency      | Throughput  |
 | ----------- | -------------- | ----------- | ---------- | --------- | --------- | --------- | ------------ | -------------------------- | ----------- |
 | **B1**      | $256\times256$ | $(2, 3, 2)$ | 17.12      | 1.07      | 79.94     | 94.93     | 41.36        | —                          | 773.7 img/s |
-| **B1-Lite** | $256\times256$ | $(1, 3, 2)$ | 16.54      | 0.93      | 77.96     | 93.79     | 38.54        | **-6.82%** (1.07$\times$)  | 830.4 img/s |
+| **B1-Lite** | $256\times256$ | $(1, 3, 2)$ | 16.54      | 0.93      | 77.96     | 93.79     | 38.54        | **-6.82%** (1.07x)  | 830.4 img/s |
 | **B2**      | $384\times384$ | $(2, 3, 2)$ | 17.12      | 2.41      | 81.63     | 95.89     | 113.31       | —                          | 282.4 img/s |
-| **B2-Lite** | $384\times384$ | $(1, 3, 2)$ | 16.54      | 2.10      | 80.25     | 95.19     | 93.49        | **-17.49%** (1.21$\times$) | 342.3 img/s |
+| **B2-Lite** | $384\times384$ | $(1, 3, 2)$ | 16.54      | 2.10      | 80.25     | 95.19     | 93.49        | **-17.49%** (1.21x) | 342.3 img/s |
 | **B4**      | $512\times512$ | $(2, 3, 2)$ | 17.12      | 4.29      | 82.50     | 96.26     | 195.29       | —                          | 163.9 img/s |
-| **B4-Lite** | $512\times512$ | $(1, 3, 2)$ | 16.54      | 3.73      | 81.03     | 95.44     | 159.37       | **-18.40%** (1.23$\times$) | 200.8 img/s |
+| **B4-Lite** | $512\times512$ | $(1, 3, 2)$ | 16.54      | 3.73      | 81.03     | 95.44     | 159.37       | **-18.40%** (1.23x) | 200.8 img/s |
 
 ---
 
@@ -134,8 +134,12 @@ Generated metric summaries and timing logs will be saved under `results/`.
 
 ---
 
-## Requirements
+## Author & Citation
 
-- **OS:** Linux (Ubuntu 20.04/22.04 LTS tested)
-- **GPU:** NVIDIA GPU with Compute Capability $\ge 7.5$ (Tesla T4, RTX 3090/4090, A100, V100)
-- **Storage:** $\sim 15\text{ GB}$ free space for ImageNet validation data, toolkits, and weights
+**Author:** [Md. Asif Chowdhury]  
+* Department of Computer Science and Engineering, American International University-Bangladesh (AIUB)  
+* Email: [asifjarif@gmail.com]  
+* GitHub: [@nocillax](https://github.com/nocillax)  
+* LinkedIn: [md-asif-chowdhury-xarif](https://linkedin.com/in/md-asif-chowdhury-xarif)
+
+Feel free to reach out if you have any questions.
